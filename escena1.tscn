@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://6decdohhs42v"]
+
+[ext_resource type="Script" path="res://Camera3D.gd" id="1_b5htj"]
+[ext_resource type="Script" path="res://escena1.gd" id="1_elwma"]
+[ext_resource type="PackedScene" uid="uid://u8wk25tq3n52" path="res://cair.tscn" id="2_xup2l"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_elwma")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.816703, 0, 2.03471)
+fov = 109.688
+script = ExtResource("1_b5htj")
+
+[node name="cair2" parent="." instance=ExtResource("2_xup2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

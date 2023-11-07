@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://u8wk25tq3n52"]
+
+[ext_resource type="PackedScene" uid="uid://dt1s0ogtxne8y" path="res://cair.gltf" id="1_6wpun"]
+[ext_resource type="Script" path="res://cair.gd" id="2_4e8hc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1wxi"]
+metallic = 0.35
+
+[node name="cair" instance=ExtResource("1_6wpun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.311862, 0, 0)
+script = ExtResource("2_4e8hc")
+
+[node name="Skeleton3D" parent="Cat_arm_001" index="0"]
+bones/0/position = Vector3(-0.00556645, 0.410249, 0.211502)
+bones/0/rotation = Quaternion(0.0121297, 0.720515, -0.693218, 0.0126031)
+bones/2/rotation = Quaternion(0.0298197, -0.0021218, 0.0186877, 0.999378)
+bones/5/rotation = Quaternion(-0.111629, -0.0544131, -0.0853873, 0.988578)
+bones/6/rotation = Quaternion(-0.0462151, -0.0457822, -0.0694349, 0.995463)
+bones/7/rotation = Quaternion(-0.0678466, -0.0422432, -0.0544537, 0.995313)
+bones/8/rotation = Quaternion(-0.228633, -0.0311274, -0.0455917, 0.971946)
+bones/9/rotation = Quaternion(-0.214051, -0.0136418, -0.0364853, 0.976046)
+bones/10/rotation = Quaternion(-0.165577, -0.00296526, -0.0179555, 0.986029)
+bones/13/rotation = Quaternion(-0.672539, 0.046395, 0.0430333, 0.737351)
+bones/14/rotation = Quaternion(0.661294, -0.00425658, 0.00477732, 0.750099)
+bones/17/rotation = Quaternion(-0.680463, 0.0453938, 0.0440995, 0.730044)
+bones/18/rotation = Quaternion(0.650779, -0.00369865, 0.00525125, 0.75924)
+bones/20/rotation = Quaternion(-0.819499, -0.149308, -0.0266253, 0.552648)
+bones/21/rotation = Quaternion(0.704666, -0.0164941, 0.0927217, 0.703261)
+bones/23/rotation = Quaternion(-0.832921, 0.103012, -0.060738, 0.540317)
+bones/24/rotation = Quaternion(0.66676, 0.0231083, -0.0948011, 0.738857)
+bones/25/position = Vector3(-0.184244, 0.776416, -0.333342)
+bones/25/rotation = Quaternion(1.69407e-21, 1, 0, -1.94707e-07)
+bones/26/rotation = Quaternion(1.94365e-07, -0.00725182, 0.999974, 4.51221e-08)
+bones/29/position = Vector3(-0.00556645, 0.410249, 0.211502)
+bones/29/rotation = Quaternion(5.59175e-08, 0.751921, 0.659254, -1.05734e-07)
+bones/30/rotation = Quaternion(0.244208, 0.00321195, 0.000125486, 0.969718)
+bones/31/rotation = Quaternion(-0.0605792, 0.0191458, 0.0417068, 0.997108)
+bones/33/rotation = Quaternion(0.0990424, -5.08597e-07, -1.32644e-07, 0.995083)
+bones/36/rotation = Quaternion(0.680351, 0.100686, -0.191953, 0.700099)
+bones/38/rotation = Quaternion(0.68736, -0.110824, 0.286645, 0.658095)
+bones/40/position = Vector3(-0.0401009, 0.070458, 0.0257144)
+bones/40/rotation = Quaternion(0.478491, 2.25416e-05, 1.14792e-05, 0.878093)
+bones/41/position = Vector3(0.0401012, 0.0704579, 0.0257144)
+bones/41/rotation = Quaternion(0.478491, 2.45667e-05, 1.24146e-05, 0.878093)
+bones/42/position = Vector3(-0.0401009, 0.0699423, 0.0316182)
+bones/42/rotation = Quaternion(-0.131195, -9.45662e-06, -8.96294e-06, 0.991355)
+bones/43/position = Vector3(0.0401012, 0.0699422, 0.0316182)
+bones/43/rotation = Quaternion(-0.131195, -9.06943e-06, -9.01378e-06, 0.991355)
+bones/44/position = Vector3(-0.0325803, 0.0325396, 0.267933)
+bones/48/rotation = Quaternion(1.94365e-07, -0.00725182, 0.999974, 4.51221e-08)
+bones/51/position = Vector3(0.0312656, 0.0325396, 0.229855)
+bones/51/rotation = Quaternion(7.54979e-08, -8.14603e-08, 1, 6.15008e-15)
+
+[node name="Cat_high_001" parent="Cat_arm_001/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_a1wxi")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Cat_arm_001|Scene"
